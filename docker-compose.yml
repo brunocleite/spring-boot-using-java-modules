@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+  db:
+    image: mongo:3.6-xenial
+    ports:
+      - "27017:27017"
+    container_name: spring-boot-with-java-modules-mongo
