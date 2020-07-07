@@ -1,10 +1,9 @@
-package com.okta.developer.animals.service;
+package com.okta.developer.animals.bird;
 
-import com.okta.developer.animals.bird.Bird;
-import com.okta.developer.animals.bird.BirdRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Component
@@ -15,6 +14,14 @@ public class BirdPersistence {
     @Autowired
     public BirdPersistence(BirdRepository birdRepository) {
         this.birdRepository = birdRepository;
+    }
+
+    @PostConstruct
+    void postConstruct(){
+        Bird sampleBird = new Bird();
+        sampleBird.setSpecie("Hummingbird");
+        sampleBird.setSize("small");
+        save(sampleBird);
     }
 
     public void save(Bird bird) {

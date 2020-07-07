@@ -1,7 +1,7 @@
 package com.okta.developer;
 
 import com.okta.developer.animals.bird.Bird;
-import com.okta.developer.animals.service.BirdPersistence;
+import com.okta.developer.animals.bird.BirdPersistence;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
