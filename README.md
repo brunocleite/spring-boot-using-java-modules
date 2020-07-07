@@ -7,11 +7,6 @@ One of that changes was the modular system that is available since Java 9.
 The Modular system came to address a recurring concern on Java apps: 'how to hide classes from libraries that are not meant to be used outside or just by specific applications?'
 We know that we have the visibility modifiers: public, private, protected and default, but those are not enough to provide external visibility. It is common for a class to live inside a package and be used throughout the library, but it may be a class not meant for external use. Therefore, it has public visibility but on the other side it shouldn't be available for applications depending on that library. This is the situation in which the Modular System can help.
 
-
-**Table of Contents**{: .hide }
-* Table of Contents
-{:toc}
-
 ## Introduction 
 
 On Java 8 and backwards the JDK was a single unit and it was needed to install it entirely even if you were just using a couple JDK classes. So starting on Java 9 there was a huge change on JDK classes so that the entire JDK was modularized. Various modules were created to organize the contents of the JDK, some examples are `java.base`, `java.sql`, `java.xml` and so on. To have an idea there are a total of 60 modules in Java 14 JDK.
